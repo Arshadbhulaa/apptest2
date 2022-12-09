@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="GameZA.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+h3 {text-align: center;}
+ body {
+ font-family: 'Playfair Display', serif;
+    display: grid;
+    background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+ body {
+  text-align: center;
+  height: 100%;
+
+}
+
+.svg-wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-100%);
+    margin: 0 auto;
+  width: 700px;  
+}
+.shape {
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 9px;
+  fill: transparent;
+  stroke: #0040FF;
+  border-bottom: 5px solid black;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+.text {
+  font-family: 'Roboto Condensed';
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 8px;
+  color: #000000;
+  top: -48px;
+  position: relative;
+}
+.svg-wrapper:hover .shape {
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 760;
+}
+
+div.youtube {
+  text-align: justify;
+} 
+div.location{
+text-align:center;
+ transform: translateY(-95%);
+}
+</style>
+		
+  </head>
+
+  <body>
+ 
+  <img src="GameZA.png" height ="250px"/>
+  
+  <div class="svg-wrapper">
+  <svg height="60" width="350">
+   <rect class="shape" height="60" width="320" />
+    <div class="text">Call:034 4567 898</div>
+  </svg>
+</div>
+
+	 <hr>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="Games.jpg" alt="Games image" height="600px" style="width:100%">
+  <h3>Check out our Top 10 latest Games!</h3>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="computer1.jpg" alt="Computer prodcuts image "height="600px" style="width:100%">
+  <h3>We have all the accessories for your computer!</h3>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="computer2.jpg" alt="Computer image" height="600px" style="width:100%">
+  <h3>Build your ultimate PC with us!</h3>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<br>
+<div class="youtube">
+Check us on Youtube :
+</div>
+<div class= "youtube">
+<iframe width="350px" height="350px" src="https://www.youtube.com/embed/81cEdDTd9qc" title="Welcome to Gameza!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class = "location">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.543949078206!2d30.9973851146422!3d-29.848582929153626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7a9fcccb88097%3A0x78aa92cdb1ffeb12!2sMusgrave%20Centre!5e0!3m2!1sen!2sza!4v1662307416757!5m2!1sen!2sza" width="350px" height="350px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <h3>Find Us :
+</div>
+<br>
+<H3><a href="page2.html">Next Page</h3></a>
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>	
+ 
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><span></span></label>
+    <label for="active" class="close"></label>
+    <div class="wrapper">
+      <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="Page2.html">Computer-products</a></li> <br>
+<li><a href="Page3.html">Games</a></li>
+<li><a href="Page4.html">About-us</a></li> <br>
+<li><a href="Page5.html">Reviews</a></li>
+</ul>
+<br>
+
+</body>
+</html>
